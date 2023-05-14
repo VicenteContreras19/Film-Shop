@@ -1,0 +1,46 @@
+[
+    {
+        "id":1,
+        "name": "Kodak VISION3 50D",
+        "price": 19.99,
+        "imgUrl": "/imgs/KodakVISION350D.png"
+        
+    },
+    {
+        "id":2,
+        "name": "Kodak VISION3 200T",
+        "price": 19.99,
+        "imgUrl": "/imgs/KodakVISION3200T.png"
+        
+    },
+    {
+        "id":3,
+        "name": "Kodak VISION3 500T",
+        "price": 19.99,
+        "imgUrl": "/imgs/KodakVISION3500T.png"
+        
+    },
+    {
+        "id":4,
+        "name": "Portra 400 35mm",
+        "price": 15.99,
+        "imgUrl": "/imgs/Portra40035mm.png"
+        
+    },
+    {
+        "id":5,
+        "name": "Velvia 50 120mm",
+        "price": 25.99,
+        "imgUrl": "/imgs/Velvia50120mm.png"
+        
+    },
+    {
+        "id":6,
+        "name": "Ektar 100 35mm",
+        "price": 14.99,
+        "imgUrl": "/imgs/Ektar10035mm.png"
+        
+    }
+]
+
+

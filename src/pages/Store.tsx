@@ -2,7 +2,8 @@ import React from "react";
 import storeItems from "../data/items.json";
 import { Col, Row } from "react-bootstrap";
 import { StoreItem } from "../components/StoreItem";
-import mockitems from "../data/mockitems.json";
+
+
 
 export function Store() {
   return (
@@ -31,10 +32,12 @@ export function Store() {
         ></video>
 
       </div>
-      <h1  style={{color: 'red'}}>Store</h1>
-      <Row md={2} xs={1} lg={3} className="g-3">
+
+
+      <h1  style={{color: 'white'}}></h1>
+      <Row md={2} xs={1} lg={3} className="g-3 ">
         {storeItems.map(item => (
-          <Col key={item.id}>
+          <Col className="mb-4 mt-0" key={item.id}>
             <StoreItem {...item} />
           </Col>
         ))}

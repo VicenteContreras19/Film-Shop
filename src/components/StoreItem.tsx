@@ -20,7 +20,9 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
 
 
   return (
-    <Card className="h-100 bg-transparent" style={{outline:"none"}}>
+    <Card  className="h-100 p-5" style={{
+      backgroundColor: "rgba(0, 0, 0, 0.6)", // Neutral color (white) with opacity of 0.8
+      outline:"none"}}>
       <Card.Img
         variant="top"
         src={imgUrl}
@@ -33,7 +35,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
       <Card.Body className="d-flex flex-column" style={{outline:"none"}}>
         <Card.Title style={{color: 'orange'}} className="d-flex justify-content-between align-items-baseline mb-4">
           <span className="fs-2">{name}</span>
-          <span className="ms-2 text-muted">{formatCurrency(price)}</span>
+          <span className="ms-2 text-light">{formatCurrency(price)}</span>
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
@@ -49,7 +51,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
               >
                 <Button onClick={()=>decreaseCartQuantity(id)}>-</Button>
                 <div>
-                  <span className="fs-3">{quantity}</span> in cart
+                  <span className="fs-3 text-light">{quantity} added</span> 
                 </div>
                 <Button onClick={()=>increaseCartQuantity(id)}>+</Button>
               </div>

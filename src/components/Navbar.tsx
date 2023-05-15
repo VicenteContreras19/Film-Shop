@@ -5,24 +5,29 @@ import { useShoppingCart } from "../context/shoppingCartContext";
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
-    <NavbarBs sticky="top" className="bg-dark shadow-sm mb-3">
+    <NavbarBs sticky="top" className="bg-dark shadow-sm mb-5">
       <Container className="d-flex justify-content-between">
-        <Nav className="me.auto bg-danger  ">
-          <Nav.Link to="/" as={NavLink}>
+    <div className="d-flex justify-content">
+      <NavbarBs.Brand className="text-danger " >Video Vortex Film Shop</NavbarBs.Brand>
+
+
+        <Nav className="me.auto bg-dark  ">
+          <Nav.Link className="text-light" to="/" as={NavLink}>
             {" "}
-            Home
+          Home
           </Nav.Link>
           <br />
-          <Nav.Link to="/store" as={NavLink}>
+          <Nav.Link className="text-light" to="/store" as={NavLink}>
             {" "}
             Store
           </Nav.Link>
           <br />
-          <Nav.Link to="/about" as={NavLink}>
+          <Nav.Link className="text-light" to="/about" as={NavLink}>
             {" "}
             About
           </Nav.Link>
         </Nav>
+        </div>
         {cartQuantity > 0 && (
           <Button 
             onClick={openCart}

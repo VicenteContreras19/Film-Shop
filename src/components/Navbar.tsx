@@ -7,8 +7,10 @@ export function Navbar() {
   return (
     <NavbarBs sticky="top" className="bg-dark shadow-sm mb-5">
       <Container className="d-flex justify-content-between">
-    <div className="d-flex justify-content">
-      <NavbarBs.Brand className="text-danger " >Video Vortex Film Shop</NavbarBs.Brand>
+    <div className="d-flex align-items-center gap-3">
+      <NavbarBs.Brand className="text-danger h1 m-0">
+        <h3>Video Vortex Film Shop</h3>
+      </NavbarBs.Brand>
 
 
         <Nav className="me.auto bg-dark  ">

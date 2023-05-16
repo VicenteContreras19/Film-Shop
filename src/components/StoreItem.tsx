@@ -34,28 +34,32 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
       />
       <Card.Body className="d-flex flex-column gap-3" style={{outline:"none"}}>
         <Card.Title style={{color: 'orange'}} className="d-flex m-0  align-items-center flex-column">
-          <span className="fs-3">{name}</span>
+          <span className="fs-5">{name}</span>
         </Card.Title>
-          <span className=" text-light fs-5 text-center">{formatCurrency(price)}</span>
+          <span style={{
+            fontFamily: 'sans-serif'
+          }} className=" text-light fs-4 text-center">{formatCurrency(price)}</span>
         <div className="">
           {quantity === 0 ? (
-            <Button className="w-100"onClick={()=>increaseCartQuantity(id)}>+ Add to Cart</Button>
+            <Button className="w-100 bg-danger border-danger"onClick={()=>increaseCartQuantity(id)}>Add to Cart</Button>
           ) : (
             <div
               className="d-flex align-items-center flex-column"
               style={{ gap: ".5rem" }}
             >
               <div
-                className="d-flex align-items-center justify-content-center"
+                className="d-flex align-items-center justify-content-center gap-3"
                 style={{ gap: ".5rem" }}
               >
-                <Button onClick={()=>decreaseCartQuantity(id)}>-</Button>
-                <div>
-                  <span className="fs-3 text-light">{quantity} added</span> 
+                <Button className="bg-dark border-dark" onClick={()=>decreaseCartQuantity(id)}>-</Button>
+                <div style={{
+                  fontFamily: 'sans-serif'
+                }}>
+                  <span className="fs-4 text-light">{quantity} in Cart</span> 
                 </div>
-                <Button onClick={()=>increaseCartQuantity(id)}>+</Button>
+                <Button className="increment-decrement bg-dark border-dark" onClick={()=>increaseCartQuantity(id)}>+</Button>
               </div>
-              <Button onClick={()=>removeFromCart(id)} variant="danger" size="sm">
+              <Button onClick={()=>removeFromCart(id)} variant="warning" size="sm">
                 Remove
               </Button>
             </div>

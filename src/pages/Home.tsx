@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import '../static/style.scss'
 
 
@@ -5,6 +6,7 @@ import '../static/style.scss'
 
 
 export function Home() {
+  const navigate = useNavigate()
     return (
       <>
         <div
@@ -42,17 +44,21 @@ export function Home() {
             minHeight: "80vh",
           }}
         >
-          <h1>
+          <div className=''>
+          <h1 className='m-4'>
             The Journey Begins
-            <br />
-            <button type="button" className="btn btn-outline-light btn-lg">
+          </h1>
+          <div className='d-flex align-items-center justify-content-center gap-5'>
+            <button onClick={() => navigate('/store')} type="button" className="btn btn-outline-light btn-lg">
               Store
             </button>
             
-            <button type="button" className="btn btn-outline-light btn-lg ml-3">
+            <button onClick={() => navigate('/about')} type="button" className="btn shadow btn-outline-light btn-lg ml-3">
               About
             </button>
-          </h1>
+
+          </div>
+            </div>
         </div>
       </>
     );

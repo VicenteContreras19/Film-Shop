@@ -5,33 +5,38 @@ import { useShoppingCart } from "../context/shoppingCartContext";
 export function Navbar() {
   const { openCart, cartQuantity } = useShoppingCart();
   return (
-    <NavbarBs sticky="top" className="bg-dark shadow-sm mb-5">
-      <Container className="d-flex justify-content-between">
-    <div className="d-flex align-items-center gap-3">
-      <NavbarBs.Brand className="text-danger h1 m-0">
-        <h3>Video Vortex Film Shop</h3>
-      </NavbarBs.Brand>
-
-
-        <Nav className="me.auto bg-dark  ">
-          <Nav.Link className="text-light" to="/" as={NavLink}>
-            {" "}
-          Home
-          </Nav.Link>
-          <br />
-          <Nav.Link className="text-light" to="/store" as={NavLink}>
-            {" "}
-            Store
-          </Nav.Link>
-          <br />
-          <Nav.Link className="text-light" to="/about" as={NavLink}>
-            {" "}
-            About
-          </Nav.Link>
-        </Nav>
+    <NavbarBs sticky="top" className="px-5 bg-dark shadow-sm mb-5 d-flex justify-content-between">
+     
+        <div className="d-flex justify-content-between align-items-center gap-3 p-1 ">
+          <NavbarBs.Brand className="text-danger h1 m-0">
+            <h4 style={{
+              fontFamily: 'bruno ace'
+            }}>Video Vortex Film Shop</h4>
+          </NavbarBs.Brand>
+          <Nav className="me.auto bg-dark d-flex align-items-center fs-6 ">
+            <Nav.Link style={{
+              fontFamily: 'bruno ace'
+            }} className="text-light mb-0" to="/" as={NavLink}>
+              Home
+            </Nav.Link>
+            <br />
+            <Nav.Link style={{
+              fontFamily: 'bruno ace'
+            }} className="text-light" to="/store" as={NavLink}>
+              
+              Store
+            </Nav.Link>
+            <br />
+            <Nav.Link style={{
+              fontFamily: 'bruno ace'
+            }} className="text-light" to="/about" as={NavLink}>
+              
+              About
+            </Nav.Link>
+          </Nav>
         </div>
         {cartQuantity > 0 && (
-          <Button 
+          <Button
             onClick={openCart}
             style={{ width: "3rem", height: "3rem", position: "relative" }}
             variant="outline-primary"
@@ -54,14 +59,14 @@ export function Navbar() {
                 position: "absolute",
                 bottom: 0,
                 right: 0,
-                transform: "translate(25%, 25%)"
+                transform: "translate(25%, 25%)",
               }}
             >
               {cartQuantity}
             </div>
           </Button>
         )}
-      </Container>
+     
     </NavbarBs>
   );
 }

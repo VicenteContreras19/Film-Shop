@@ -4,7 +4,7 @@ import App from './App'
 import "bootstrap/dist/css/bootstrap.min.css" 
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from 'react-query'
-
+import './index.css'
 
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
